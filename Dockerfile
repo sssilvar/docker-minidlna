@@ -1,4 +1,7 @@
-FROM debian:wheezy
+FROM debian:jessie
+
+# Prevent dpkg errors
+ENV TERM=xterm-256color
 
 RUN apt-get update; \
     apt-get install -y --no-install-recommends minidlna; \
